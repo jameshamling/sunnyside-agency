@@ -28,6 +28,8 @@
 body {
     margin: 0;
     width: 100%;
+    font-family: var(--ff-primary);
+    font-weight: 600;
 }
 
 /* utilities */
@@ -35,6 +37,19 @@ body {
 .title,
 .heading {
     font-family: var(--ff-accent);
+    margin: 0;
+}
+
+.heading--h2 {
+    font-size: 1.4rem;
+}
+
+.heading--h3 {
+    font-size: 1.4rem;
+}
+
+.full-height-container {
+    height: 100vh;
 }
 
 /* top section */
@@ -115,6 +130,92 @@ body {
     text-transform: uppercase;
     letter-spacing: 5px;
     margin-bottom: 1.5em;
+}
+
+/* main content */
+
+.main-content {
+
+
+    &__img {
+        max-width: 100%;
+    }
+
+    &__item {
+        padding: 3em 1em;
+        text-align: center;
+    }
+
+    p {
+        color: var(--clr-accent-600);
+        line-height: 1.5;
+    }
+
+    .learn-more {
+        display: inline-block;
+        text-decoration: none;
+        color: var(--clr-accent-900);
+        text-transform: uppercase;
+        font-family: var(--ff-accent);
+        letter-spacing: 1px;
+        font-size: 0.9rem;
+        margin-top: 1.5em;
+        position: relative;
+    }
+
+    .learn-more::before {
+        content: '';
+        position: absolute;
+        width: calc(100% + 1em);
+        height: 0.6em;
+        opacity: 0.3;
+        left: -0.5em;
+        bottom: -0.1em;
+        z-index: -1;
+    }
+
+    .learn-more--transform::before {
+        background-color: var(--clr-primary-yellow);
+    }
+
+    .learn-more--stand-out::before {
+        background-color: var(--clr-primary-red);
+    }
+
+    .learn-more:hover::before {
+        opacity: 1;
+    }
+
+    .graphic-design-container,
+    .photography-container {
+        display: flex;
+        flex-direction: column;
+        background-size: cover;
+        background-position: center;
+
+        .heading--h3 {
+            margin-top: auto;
+        }
+
+    }
+
+    .graphic-design-container {
+        background-image: url(images/desktop/image-graphic-design.jpg);
+        
+        &, p {
+            color: var(--clr-primary-cyan-600);
+        }
+
+    }
+
+    .photography-container {
+        background-image: url(images/desktop/image-photography.jpg);
+
+        &, p {
+            color: var(--clr-primary-blue);
+        }
+
+    }
 }
 
 
