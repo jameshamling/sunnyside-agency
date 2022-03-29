@@ -1,0 +1,193 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --ff-primary: "Barlow", sans-serif;
+  --ff-accent: "Fraunces", serif;
+  --fw-600: 600;
+  --fw-700: 700;
+  --fw-900: 900;
+  --clr-white: #fff;
+  --clr-primary-red: hsl(7, 99%, 70%);
+  --clr-primary-yellow: hsl(51, 100%, 49%);
+  --clr-primary-cyan-600: hsl(167, 40%, 24%);
+  --clr-primary-cyan-500: hsl(168, 34%, 41%);
+  --clr-primary-blue: hsl(198, 62%, 26%);
+  --clr-accent-900: hsl(212, 27%, 19%);
+  --clr-accent-700: hsl(213, 9%, 39%);
+  --clr-accent-600: hsl(232, 10%, 55%);
+  --clr-accent-400: hsl(210, 4%, 67%);
+  --padding-body: 1em;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  font-family: var(--ff-primary);
+  font-weight: 600;
+}
+
+/* utilities */
+.title,
+.heading {
+  font-family: var(--ff-accent);
+  margin: 0;
+}
+
+.heading--h2 {
+  font-size: 1.4rem;
+}
+
+.heading--h3 {
+  font-size: 1.4rem;
+}
+
+.full-height-container {
+  height: 100vh;
+}
+
+/* top section */
+.section--top {
+  background-image: url(images/desktop/image-header.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  padding: var(--padding-body);
+  color: var(--clr-white);
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  margin-top: 0.5em;
+  margin-bottom: 4em;
+  font-size: 1.4rem;
+}
+.header ul {
+  margin: 0;
+  padding: 0;
+}
+.header li {
+  list-style: none;
+  margin: 0;
+  padding: 0.8em 0;
+}
+.header__navbar, .header__menu {
+  display: none;
+}
+.header__menu {
+  position: absolute;
+  top: 2em;
+  width: 100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 2em 1em;
+  padding-top: calc(10% + 1em);
+  background: var(--clr-white);
+  clip-path: polygon(0 10%, 90% 10%, 100% 0, 100% 100%, 0% 100%);
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-700);
+  color: var(--clr-accent-600);
+}
+.header #contact-btn {
+  background: var(--clr-primary-yellow);
+  display: inline-block;
+  padding: 1em 1.5em;
+  margin-top: 1em;
+  border-radius: 50px;
+  font-family: var(--ff-accent);
+  font-weight: var(--fw-600);
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  color: var(--clr-accent-900);
+}
+
+.title {
+  font-size: 1.6rem;
+  font-weight: var(--fw-900);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin-bottom: 1.5em;
+}
+
+/* main content */
+.main-content__img {
+  max-width: 100%;
+}
+.main-content__item {
+  padding: 3em 1em;
+  text-align: center;
+}
+.main-content p {
+  color: var(--clr-accent-600);
+  line-height: 1.5;
+}
+.main-content .learn-more {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--clr-accent-900);
+  text-transform: uppercase;
+  font-family: var(--ff-accent);
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+  margin-top: 1.5em;
+  position: relative;
+}
+.main-content .learn-more::before {
+  content: "";
+  position: absolute;
+  width: calc(100% + 1em);
+  height: 0.6em;
+  opacity: 0.3;
+  left: -0.5em;
+  bottom: -0.1em;
+  z-index: -1;
+}
+.main-content .learn-more--transform::before {
+  background-color: var(--clr-primary-yellow);
+}
+.main-content .learn-more--stand-out::before {
+  background-color: var(--clr-primary-red);
+}
+.main-content .learn-more:hover::before {
+  opacity: 1;
+}
+.main-content .graphic-design-container,
+.main-content .photography-container {
+  display: flex;
+  flex-direction: column;
+  background-size: cover;
+  background-position: center;
+}
+.main-content .graphic-design-container .heading--h3,
+.main-content .photography-container .heading--h3 {
+  margin-top: auto;
+}
+.main-content .graphic-design-container {
+  background-image: url(images/desktop/image-graphic-design.jpg);
+}
+.main-content .graphic-design-container, .main-content .graphic-design-container p {
+  color: var(--clr-primary-cyan-600);
+}
+.main-content .photography-container {
+  background-image: url(images/desktop/image-photography.jpg);
+}
+.main-content .photography-container, .main-content .photography-container p {
+  color: var(--clr-primary-blue);
+}
+
+/* attribution */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: #3e52a3;
+}
+
+/*# sourceMappingURL=styles.css.map */
