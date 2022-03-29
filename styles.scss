@@ -472,6 +472,7 @@ body {
 .image-gallery {
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
 
     &__img {
         width: 50vw;
@@ -483,7 +484,7 @@ body {
     @media (min-width: 900px) {
 
         &__img {
-            width: 25vw;
+            width: 25%;
             height: 400px;
         }
 
