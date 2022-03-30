@@ -44,10 +44,6 @@ body {
   font-size: 1.4rem;
 }
 
-.full-height-container {
-  height: 100vh;
-}
-
 /* top section */
 .section--top {
   background-image: url(images/desktop/image-header.jpg);
@@ -243,6 +239,10 @@ body {
 .main-content .photography-container .heading--h3 {
   margin-top: auto;
 }
+.main-content .tall-height-container {
+  height: 50vh;
+  min-height: 400px;
+}
 .main-content .graphic-design-container {
   background-image: url(images/desktop/image-graphic-design.jpg);
 }
@@ -281,11 +281,10 @@ body {
   .main-content #transform-item {
     order: -1;
   }
-  .main-content .full-height-container {
-    height: 90vh;
+  .main-content .tall-height-container {
     width: 100%;
   }
-  .main-content .full-height-container p {
+  .main-content .tall-height-container p {
     max-width: 400px;
   }
 }
@@ -298,8 +297,26 @@ body {
   .main-content__item {
     padding: 3em 4em;
   }
-  .main-content .full-height-container {
+  .main-content .tall-height-container {
     width: 50%;
+    min-height: 900px;
+  }
+}
+@media (min-width: 1100px) {
+  .main-content__item__text h2 {
+    font-size: 2rem;
+  }
+  .main-content__item__text p {
+    font-size: 1.1rem;
+  }
+  .main-content__item__text .learn-more {
+    font-size: 1.1rem;
+  }
+  .main-content .tall-height-container h3 {
+    font-size: 2rem;
+  }
+  .main-content .tall-height-container p {
+    font-size: 1.1rem;
   }
 }
 
@@ -380,7 +397,7 @@ body {
   width: 100%;
 }
 .image-gallery__img {
-  width: 50vw;
+  width: 50%;
   height: 50vw;
   object-fit: cover;
   object-position: center;
